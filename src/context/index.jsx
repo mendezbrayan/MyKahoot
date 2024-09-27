@@ -121,6 +121,13 @@ export const KahootProvider = ({ children }) => {
       setValor2(valor2 + 1);
     }
   };
+  
+  const eliminarTest = (index) => {
+    const result = preguntas.filter((item,indice) => indice !== index)
+    localStorage.setItem("tests", JSON.stringify(result));
+    setPreguntas(result)
+
+  }
 
   return (
     <KahootContext.Provider
@@ -160,7 +167,8 @@ export const KahootProvider = ({ children }) => {
         handleSubmit,
          errors,
          reset,
-         respuesta 
+         respuesta,
+         eliminarTest
       }}
     >
       {children}
