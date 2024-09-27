@@ -32,7 +32,6 @@ const {
   const navigate = useNavigate()
 
   const handleCreateTest = (data) => {
-    console.log(data,'hola')
     const { autor, time, nombreTest } = data;
     if (preguntass.length <= 0) {
       alert("No puedes guardar");
