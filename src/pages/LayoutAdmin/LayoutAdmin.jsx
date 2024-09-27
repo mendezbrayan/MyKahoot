@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import { KahootContext } from "../../context";
 
 const LayoutAdmin = () => {
-  const {copyLink,eliminarTest,preguntas} = useContext(KahootContext)
+  const {copyLink,eliminarTest} = useContext(KahootContext)
+const table = JSON.parse(localStorage.getItem('tests'))
   return (
     <>
       <div className="container pt-5">
@@ -27,7 +28,7 @@ const LayoutAdmin = () => {
               </tr>
             </thead>
             <tbody>
-              {preguntas.map((item,index) => (
+              {table?.map((item,index) => (
                   <tr  key={index}>
                 <td>1</td>
                 <td>{item.nombreTest}</td>

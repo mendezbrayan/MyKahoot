@@ -30,8 +30,8 @@ const {
   errors,reset } = useContext(KahootContext)
 
   const navigate = useNavigate()
-
   const handleCreateTest = (data) => {
+
     const { autor, time, nombreTest } = data;
     if (preguntass.length <= 0) {
       alert("No puedes guardar");
